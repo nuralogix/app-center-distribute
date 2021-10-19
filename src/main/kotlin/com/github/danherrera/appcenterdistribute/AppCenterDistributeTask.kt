@@ -74,7 +74,8 @@ open class AppCenterDistributeTask : DefaultTask() {
 
             val applicationJson = MediaType.parse("application/json")
 
-            val releaseUploadsUrl = "$baseUrl$ownerName/$appName/release_uploads"
+            // https://openapi.appcenter.ms/#/distribute/releases_createReleaseUpload
+            val releaseUploadsUrl = "$baseUrl$ownerName/$appName/uploads/releases"
 
             // Call 1/4: Get Release Upload ID and URL
             log("1/4 Getting Upload ID and URL...")
